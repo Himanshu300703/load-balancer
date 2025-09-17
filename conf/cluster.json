@@ -1,0 +1,6 @@
+{
+    "workers": 1,
+    "min_workers": 1,
+    "clusterSize": 1
+}
+  

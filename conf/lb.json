@@ -1,0 +1,44 @@
+{
+  "host": "127.0.0.1",
+  "port": "3600",
+  "stickySession": true,
+  "mode": "http",
+  "secure": false,
+  "sslConf": {
+    "key": "./certs/key.pem",
+    "cert": "./certs/cert.pem"
+  },
+  "check": {
+    "type": "httpCheck",
+    "path": "/health-check",
+    "timeout": 5000,
+    "protocol": "http"
+  },
+  "servers": [
+    {
+      "host": "127.0.0.1",
+      "port": "8080",
+      "enabled": true,
+      "secure": false,
+      "check": {
+        "type": "endpointCheck",
+        "endpoint": "/health-check",
+        "target": null,
+        "timeout": 5000
+      }
+    },
+    {
+      "host": "127.0.0.1",
+      "port": "8081",
+      "enabled": true,
+      "secure": false,
+      "check": {
+        "type": "endpointCheck",
+        "endpoint": "/health-check",
+        "target": null,
+        "timeout": 5000
+      }
+    }
+  ],
+  "healthCheckInterval": 30000
+}

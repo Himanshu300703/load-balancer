@@ -1,0 +1,7 @@
+{
+    "level": "info",
+    "logFilePath": "./logs/load-balancer.log.ndjson",
+    "logToConsole": true,
+    "logFile": "logs/access.log"
+  }
+  
